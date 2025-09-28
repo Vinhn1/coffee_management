@@ -9,7 +9,7 @@ class Router
         // Danh sách controller và action 
         $controllerList = array(
             'home' => ['index', 'error'],
-            'employee' => ['list', 'create', 'error'],
+            'employee' => ['list', 'create', 'search', 'error'],
         );
 
         // Kiểm tra nếu không có controller tồn tại thì trả về index/error
