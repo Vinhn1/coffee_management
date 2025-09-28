@@ -19,7 +19,8 @@ class Employee
 
     // create
     // $data là một mảng chứa thông tin nhân viên cần thêm (được truyền từ Controller).
-    public function create($data){
+    public function create($data)
+    {
         $sql = "INSERT INTO nhanvien(id_nhanvien, ten_nhanvien, gioitinh, ngaysinh, sdt, chucvu, luongcoban, ngayvaolam, trangthai) VALUES (:id, :ten, :gioitinh, :ngaysinh, :sdt, :chucvu, :luongcoban, :ngayvaolam, :trangthai)";
 
         // prepare($sql) chuẩn bị câu lệnh SQL để thực thi, nhưng chưa truyền giá trị thật.
@@ -38,5 +39,13 @@ class Employee
         //     ':ngayvaolam' => $data['ngayvaolam'],
         //     ':trangthai' => $data['trangthai'],
         // ]);
+    }
+
+    // Hàm kiểm tra xem id đó tồn tại hay chưa
+    public function exists($id)
+    {
+        $stmt = $this->conn->prepare("SELECT COUNT(*) FROM nhanvien WHERE id_nhanvien = :id");
+        $stmt->execute([':id' => $id]);
+        return $stmt->fetchColumn() > 0;
     }
 }

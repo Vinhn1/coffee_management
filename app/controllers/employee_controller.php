@@ -33,12 +33,21 @@
                 
 
                 $employeeModel = new Employee();
+                // Gọi hàm kiểm tra tồn tại
+                if ($employeeModel->exists($data['id'])) {
+                    $error = "ID nhân viên đã tồn tại, vui lòng nhập ID khác.";
+                    $this->render("create", ['error' => $error, 'old' => $data]);
+                    return; 
+                }
+
                 $success = $employeeModel->create($data);
 
                 if($success){
                     header("Location: index.php?controller=employee&action=list");
+                    exit;
                 }else{
-                    echo "Thêm Nhân Viên Thất Bại";
+                    $error = "Thêm Nhân Viên Thất Bại";
+                    $this->render("create", ['error' => $error, 'old' => $data]);
                 }
 
             }else{
