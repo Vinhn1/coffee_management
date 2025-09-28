@@ -4,13 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/css/bootstrap.min.css">
+    <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css custom -->
     <link rel="stylesheet" href="<?= BASE_URL ?>/css/style.css">
     <title>Mocha Coffee</title>
 </head>
 
 <body>
-    <div class="container">
-        Day la header
-    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
+        <div class="container-fluid">
+            <!-- logo -->
+            <a href="#" class="navbar-brand d-flex align-item-center">
+                <img src="<?= BASE_URL ?>/images/logo2.png" width="40" height="40" alt="" class="logo me-2">
+                <span>Mouse & Cheese</span>
+            </a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= BASE_URL ?>/index.php?controller=product&action=list" class="nav-link">Thực Đơn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= BASE_URL ?>/index.php?controller=employee&action=list" class="nav-link">Dashbroad</a>
+                    </li>
+                    <!-- Đăng Nhập (hiện khi màn hình nhỏ) -->
+                    <li class="nav-item d-md-none">
+                        <a href="#" class="nav-link nav-login">Đăng Nhập</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Đăng Nhập -->
+            <div class="nav-login d-none d-md-block">
+                <a href="#" class="btn btn-outline-light">Đăng Nhập</a>
+            </div>
+        </div>
+    </nav>
