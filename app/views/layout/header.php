@@ -34,13 +34,42 @@
                         <a href="#" class="nav-link active">Trang Chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= BASE_URL ?>/index.php?controller=product&action=list" class="nav-link">Thực Đơn</a>
+                        <a href="#" class="nav-link">Thực Đơn</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Liên Hệ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= BASE_URL ?>/index.php?controller=employee&action=list" class="nav-link">Dashbroad</a>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dashbroad
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li>
+
+                                            <a class="dropdown-item" href="<?= BASE_URL ?>/index.php?controller=employee&action=list">
+                                                <i class="fa-solid fa-users m-1"></i>
+                                                Quản Lí Nhân Viên
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa-solid fa-mug-hot m-1"></i>
+                                                Quản Lí Sản Phẩm
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa-solid fa-chart-line m-1"></i>
+                                                Thống Kê
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <!-- Đăng Nhập (hiện khi màn hình nhỏ) -->
                     <li class="nav-item d-md-none">
