@@ -1,0 +1,71 @@
+/* Footer */
+.footer {
+  background-color: #1f1f1f;
+  color: #f8f1e7;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Tiêu đề trong footer */
+.footer h6 {
+  font-size: 1.1rem;
+  color: #f6c453;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Đoạn mô tả */
+.footer p {
+  font-size: 1rem;
+  color: #e0d5c6;
+  line-height: 1.6;
+}
+
+/* Liên kết nhanh */
+.footer ul li a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e0d5c6 !important;
+  display: inline-block;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #f6c453 !important;
+  text-decoration: underline;
+}
+
+/* Liên hệ */
+.footer .small {
+  font-size: 1rem;
+  color: #e0d5c6;
+}
+
+/* Icon */
+.footer i {
+  font-size: 1.2rem;
+  color: #e0d5c6;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer i:hover {
+  transform: scale(1.2);
+}
+
+/* Icon mạng xã hội hover riêng */
+.footer a:hover i.fa-facebook-f {
+  color: #1877f2;
+}
+.footer a:hover i.fa-instagram {
+  color: #e1306c;
+}
+.footer a:hover i.fa-twitter {
+  color: #1da1f2;
+}
+
+/* Logo + tên thương hiệu */
+.footer .h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f8f1e7;
+}

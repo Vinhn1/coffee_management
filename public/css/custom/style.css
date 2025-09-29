@@ -1,0 +1,14 @@
+@import url('navbar.css');
+@import url('footer.css');
+@import url('home.css');
+@import url('contact.css');
+@import url('menu.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding-top: 140px;
+}

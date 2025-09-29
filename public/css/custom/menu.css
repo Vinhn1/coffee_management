@@ -1,0 +1,55 @@
+:root {
+  --coffee: #4b2e2b;
+  --coffee-2: #6b3f34;
+  --cream: #f6efe8;
+  --caramel: #c28f5b;
+  --bean: #2a1c18;
+  --white: #ffffff;
+}
+
+.menu-hero {
+  background: linear-gradient(
+      to right,
+      rgba(43, 26, 24, 0.85),
+      rgba(43, 26, 24, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1494415859740-21e878dd929d?q=80&w=1600&auto=format&fit=crop")
+      center/cover no-repeat;
+  color: var(--cream);
+  padding: 64px 0;
+  margin-top: -70px;
+}
+
+.menu-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  background: var(--white);
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+}
+
+.menu-chip {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--coffee);
+  color: var(--cream);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.price {
+  color: var(--coffee-2);
+  font-weight: 700;
+}
+
+.section-soft {
+  background: var(--cream);
+}

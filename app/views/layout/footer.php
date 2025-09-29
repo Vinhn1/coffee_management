@@ -47,6 +47,7 @@
         </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="<?= BASE_URL ?>/js/bootstrap/bootstrap.bundle.js"></script>
 <script type="module" src="<?= BASE_URL ?>/js/app.js"></script>
 </body>

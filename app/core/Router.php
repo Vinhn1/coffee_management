@@ -11,6 +11,7 @@ class Router
             'home' => ['index','menu', 'contact', 'error'],
             'employee' => ['list', 'create', 'search', 'update', 'deactivete', 'error'],
             'product' => ['list', 'create', 'update', 'delete', 'error'],
+            'statistical' => ['list', 'error'],
         );
 
         // Kiểm tra nếu không có controller tồn tại thì trả về index/error

@@ -1,88 +1,3 @@
-<!-- Coffee Themed Landing - Modern Refresh -->
-<style>
-    :root {
-        --coffee:#4b2e2b; /* deep espresso */
-        --coffee-2:#6b3f34; /* mocha */
-        --cream:#f6efe8; /* latte foam */
-        --caramel:#c28f5b; /* caramel drizzle */
-        --bean:#2a1c18; /* roasted bean */
-        --white:#ffffff;
-    }
-    .hero-coffee {
-        position: relative;
-        min-height: 88vh;
-        display: flex;
-        align-items: center;
-        background: linear-gradient( to right, rgba(43, 26, 24, 0.85), rgba(43, 26, 24, 0.55) ), url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-        color: var(--cream);
-    }
-    .hero-coffee .badge-hot {
-        background: var(--caramel);
-        color: var(--bean);
-        letter-spacing: .08em;
-        border-radius: 999px;
-        padding: .5rem .9rem;
-        box-shadow: 0 6px 20px rgba(0,0,0,.18);
-    }
-    .hero-title {
-        font-weight: 800;
-        line-height: 1.05;
-        text-shadow: 0 6px 24px rgba(0,0,0,.35);
-    }
-    .hero-cta .btn {
-        padding: .9rem 1.4rem;
-        border-radius: 14px;
-    }
-    .btn-caramel {
-        background: var(--caramel);
-        color: var(--bean);
-        border: none;
-        transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .btn-caramel:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,.18); }
-    .btn-outline-cream { color: var(--cream); border: 2px solid var(--cream); }
-    .btn-outline-cream:hover { color: var(--bean); background: var(--cream); }
-
-    .section-soft {
-        background: var(--cream);
-    }
-    .feature {
-        background: var(--white);
-        border: 1px solid #eee;
-        border-radius: 16px;
-        padding: 1.25rem 1.1rem;
-        height: 100%;
-        box-shadow: 0 8px 30px rgba(0,0,0,.06);
-        transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .feature:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(0,0,0,.08); }
-    .feature .icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(194,143,91,.15); color: var(--coffee); display:flex; align-items:center; justify-content:center; }
-
-    .menu-card {
-        border: none;
-        border-radius: 18px;
-        overflow: hidden;
-        box-shadow: 0 12px 36px rgba(0,0,0,.08);
-        transition: transform .18s ease, box-shadow .18s ease;
-        background: var(--white);
-    }
-    .menu-card:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(0,0,0,.12); }
-    .menu-card .price { color: var(--coffee-2); font-weight: 700; }
-    .menu-chip { position:absolute; top:14px; left:14px; background: var(--coffee); color: var(--cream); padding:.35rem .6rem; border-radius:999px; font-size:.8rem; }
-
-    .testi {
-        background: linear-gradient(180deg, #ffffff, #f9f5f1);
-        border-radius: 18px;
-        border: 1px solid #eee;
-        padding: 1.5rem;
-        height: 100%;
-    }
-    .coffee-divider { height: 2px; background: linear-gradient(to right, transparent, var(--caramel), transparent); border: 0; }
-
-    .coffee-footer { background: var(--bean); color: var(--cream); }
-    .coffee-footer a { color: var(--caramel); text-decoration: none; }
-    .coffee-footer a:hover { text-decoration: underline; }
-</style>
 
 <!-- Hero -->
 <section id="hero" class="hero-coffee">
@@ -107,21 +22,21 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="feature h-100">
-                    <div class="icon mb-3"><i class="bi bi-cup-hot"></i></div>
+                    <div class="icon mb-3"><i class="fa-solid fa-mug-hot"></i></div>
                     <h5 class="mb-2" style="color:var(--coffee)">Hạt rang thủ công</h5>
                     <p class="mb-0">Nguồn hạt Arabica & Robusta chọn lọc, rang mới mỗi ngày để giữ trọn hương thơm.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature h-100">
-                    <div class="icon mb-3"><i class="bi bi-droplet-half"></i></div>
+                    <div class="icon mb-3"><i class="fa-solid fa-droplet"></i></div>
                     <h5 class="mb-2" style="color:var(--coffee)">Công thức cân bằng</h5>
                     <p class="mb-0">Độ chua - ngọt - đắng hài hòa, phù hợp khẩu vị người Việt hiện đại.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature h-100">
-                    <div class="icon mb-3"><i class="bi bi-emoji-smile"></i></div>
+                    <div class="icon mb-3"><i class="fa-solid fa-face-smile"></i></div>
                     <h5 class="mb-2" style="color:var(--coffee)">Không gian ấm cúng</h5>
                     <p class="mb-0">Tone nâu ấm áp, ánh sáng dịu nhẹ – nơi lý tưởng cho làm việc và gặp gỡ.</p>
                 </div>
