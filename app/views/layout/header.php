@@ -55,7 +55,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">
+                                            <a class="dropdown-item" href="index.php?controller=product&action=list">
                                                 <i class="fa-solid fa-mug-hot m-1"></i>
                                                 Quản Lí Sản Phẩm
                                             </a>
