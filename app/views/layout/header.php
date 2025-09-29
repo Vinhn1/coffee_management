@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Trang Chủ</a>
+                        <a href="index.php?controller=home&action=index" class="nav-link active">Trang Chủ</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Thực Đơn</a>

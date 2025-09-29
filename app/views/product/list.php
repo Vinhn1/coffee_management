@@ -1,5 +1,22 @@
+<!-- Thông báo cập nhật thành công -->
+<?php if (isset($_GET['success']) && $_GET['success'] == '1'): ?>
+    <div class="alert alert-success alert-dismissible fade show w-75 mx-auto mb-4" role="alert">
+        <i class="fas fa-check-circle me-2"></i>
+        <strong>Thành công!</strong> Cập nhật thông tin nhân viên thành công.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
+
 <div class="table-responsive">
     <table class="table table-hover table-striped table-bordered align-middle mb-0 w-75 text-center mx-auto">
+        <!-- Nút thêm nhân viên -->
+        <div class="d-flex w-75 mb-4 mx-auto">
+            <a href="index.php?controller=product&action=create"
+                class="btn btn-success btn-lg fw-bold mt-3">
+                <i class="fas fa-user-plus me-2"></i> Thêm nhân viên
+            </a>
+        </div>
         <thead class="table-dark text-center">
             <tr>
                 <th>Mã sản phẩm</th>
@@ -23,9 +40,9 @@
                     </td>
                     <td><?= number_format($sp['giatien']) ?> VND</td>
                     <td>
-                        <a href="index.php?controller=product&action=edit&id=<?= $sp['masp'] ?>" class="btn btn-primary btn-sm m-1">EDIT</a>
+                        <a href="index.php?controller=product&action=update&id=<?= $sp['masp'] ?>" class="btn btn-primary btn-sm m-1">EDIT</a>
 
-                        <a href="" class="btn btn-danger btn-sm">DELETE</a>
+                        <a href="index.php?controller=product&action=delete&id=<?= $sp['masp'] ?>" class="btn btn-danger btn-sm">DELETE</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
