@@ -8,7 +8,7 @@ class Router
 
         // Danh sách controller và action 
         $controllerList = array(
-            'home' => ['index', 'error'],
+            'home' => ['index','menu', 'contact', 'error'],
             'employee' => ['list', 'create', 'search', 'update', 'deactivete', 'error'],
             'product' => ['list', 'create', 'update', 'delete', 'error'],
         );

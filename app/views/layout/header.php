@@ -34,10 +34,10 @@
                         <a href="index.php?controller=home&action=index" class="nav-link active">Trang Chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Thực Đơn</a>
+                        <a href="index.php?controller=home&action=menu" class="nav-link">Thực Đơn</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Liên Hệ</a>
+                        <a href="index.php?controller=home&action=contact" class="nav-link">Liên Hệ</a>
                     </li>
                     <li class="nav-item">
                         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
