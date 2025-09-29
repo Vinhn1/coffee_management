@@ -80,6 +80,13 @@ class Employee
         return $stmt->execute($data);
     }
 
+    // Update nhân viên ON/OFF
+    public function deactivete($id){
+        $sql = "UPDATE nhanvien SET trangthai = 'nghi_viec' WHERE id_nhanvien = :id";
+        $stmt = $this->conn->prepare($sql);
+        return $stmt->execute([":id" => $id]);
+    }
+
     // Hàm kiểm tra xem id đó tồn tại hay chưa
     public function exists($id)
     {

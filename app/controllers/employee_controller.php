@@ -135,5 +135,16 @@ class EmployeeController extends BaseController
             }
         }
     }
+
+
+    // Update Trạng thái nhân viên
+    public function deactivete(){
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+            $employeeModel = new Employee();
+            $employeeModel->deactivete($id);
+        }
+        header("Location: index.php?controller=employee&action=list");
+    }
 }
 ?>

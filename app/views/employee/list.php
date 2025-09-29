@@ -85,7 +85,7 @@
                         </a>
 
                         <!-- On/Off -->
-                        <a href="#" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn cho nhân viên này nghỉ việc không?')">
+                        <a href="index.php?controller=employee&action=deactivete&id=<?= $emp['id_nhanvien'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn cho nhân viên này nghỉ việc không?')">
                             <i class="fas fa-user-slash"></i>
                         </a>
                     </td>
