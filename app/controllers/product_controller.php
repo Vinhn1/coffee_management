@@ -1,6 +1,6 @@
 <?php
     require_once("base_controller.php");
-    require_once __DIR__ . "/../models/Employee.php";
+    require_once __DIR__ . "/../models/Product.php";
     class ProductController extends BaseController{
         function __construct()
         {
@@ -8,8 +8,14 @@
         }
 
         public function list(){
-            $this->render("list");
+            // $this->render("list");
+            $productModel = new Product();
+            $product = $productModel->getAll();
+            $this->render("list", ["products" => $product]);
         }
+
+        // create 
+        
     }
 
 
