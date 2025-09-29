@@ -94,5 +94,46 @@ class EmployeeController extends BaseController
             ]);
         }
     }
+
+
+    // Update
+    public function update()
+    {
+        // $this->render("update");
+        $employeeModel = new Employee();
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $data = [
+                'id_nhanvien' => $_POST['id_nhanvien'],
+                'ten_nhanvien' => $_POST['ten_nhanvien'],
+                'gioitinh' => $_POST['gioitinh'],
+                'ngaysinh' => $_POST['ngaysinh'],
+                'sdt' => $_POST['sdt'],
+                'chucvu' => $_POST['chucvu'],
+                'luongcoban' => $_POST['luongcoban'],
+                'ngayvaolam' => $_POST['ngayvaolam'],
+                'trangthai' => $_POST['trangthai'],
+            ];
+
+            $success = $employeeModel->update($data);
+
+            if ($success) {
+                header("Location: index.php?controller=employee&action=list&success=1");
+                exit;
+            } else {
+                $error = "Cập nhật nhân viên thất bại";
+                $this->render("update", ["employee" => $data]);
+            }
+        } else {
+            // Lấy id từ GET để hiển thị thông tin cần sửa
+            $id = $_GET['id_nhanvien'] ?? null;
+            $employee = $employeeModel->getById($id);
+            if($employee && is_array($employee)){
+                $this->render("update", ["employee" => $employee]);
+            }else{
+                $error = "Không tìm thấy nhân viên với ID này";
+                $this->render("update", ["error" => $error, "employee" => null]);
+            }
+        }
+    }
 }
 ?>

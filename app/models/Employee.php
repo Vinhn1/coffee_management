@@ -42,7 +42,8 @@ class Employee
     }
 
     // Tìm kiếm nhân viên theo ID
-    public function getById($id){
+    public function getById($id)
+    {
         $sql = "SELECT * FROM nhanvien WHERE id_nhanvien = :id";
         $stmt = $this->conn->prepare($sql);
         // bindParam(':id', $id) dùng để gắn biến $id vào placeholder :id trong câu SQL
@@ -52,13 +53,31 @@ class Employee
     }
 
     // Tìm kiếm nhân viên theo Name
-    public function searchByName($name){
+    public function searchByName($name)
+    {
         $sql = "SELECT * FROM nhanvien WHERE ten_nhanvien LIKE :name";
         $stmt = $this->conn->prepare($sql);
         $like = "%" . $name . "%"; // Tìm theo chuỗi hoặc theo chữ cái
         $stmt->bindParam(':name', $like);
         $stmt->execute();
         return $stmt->fetchALL(PDO::FETCH_ASSOC); // trả về nhiều nhân viên 
+    }
+
+    // Update 
+    public function update($data)
+    {
+        $sql = "UPDATE nhanvien
+        SET ten_nhanvien = :ten_nhanvien,
+        gioitinh = :gioitinh,
+        ngaysinh = :ngaysinh,
+        sdt = :sdt,
+        chucvu = :chucvu,
+        luongcoban = :luongcoban,
+        ngayvaolam = :ngayvaolam,
+        trangthai = :trangthai
+        WHERE id_nhanvien = :id_nhanvien";
+        $stmt = $this->conn->prepare($sql);
+        return $stmt->execute($data);
     }
 
     // Hàm kiểm tra xem id đó tồn tại hay chưa

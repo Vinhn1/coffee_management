@@ -1,3 +1,12 @@
+<!-- Thông báo cập nhật thành công -->
+<?php if (isset($_GET['success']) && $_GET['success'] == '1'): ?>
+    <div class="alert alert-success alert-dismissible fade show w-75 mx-auto mb-4" role="alert">
+        <i class="fas fa-check-circle me-2"></i>
+        <strong>Thành công!</strong> Cập nhật thông tin nhân viên thành công.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
 <!-- Form tìm kiếm -->
 <form action="index.php?controller=employee&action=search" method="post"
     class="row g-3 align-items-center mb-4 p-4 bg-light rounded shadow-sm w-75 form-search"
@@ -71,7 +80,7 @@
 
                     <td class="text-center">
                         <!-- Edit -->
-                        <a href="#" class="btn btn-sm btn-warning me-2">
+                        <a href="index.php?controller=employee&action=update&id_nhanvien=<?= $emp['id_nhanvien'] ?>" class="btn btn-sm btn-warning me-2">
                             <i class="fas fa-edit"></i>
                         </a>
 
