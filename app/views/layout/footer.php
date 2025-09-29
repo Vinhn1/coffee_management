@@ -7,7 +7,7 @@
             <div class="col-md-4 mb-4">
                 <a href="#" class="d-flex align-items-center mb-3 text-decoration-none">
                     <img src="<?= BASE_URL ?>/images/logo2.png" alt="Logo" width="50" height="50" class="me-2 rounded-circle">
-                    <span class="h5 mb-0">Mouse & Cheese Coffee</span>
+                    <span class="h5 mb-0">Mouse & Cheese</span>
                 </a>
                 <p class="small">
                     Quán cà phê nơi bạn tận hưởng hương vị tuyệt vời và không gian ấm áp.

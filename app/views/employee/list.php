@@ -10,7 +10,7 @@
 <!-- Form tìm kiếm -->
 <form action="index.php?controller=employee&action=search" method="post"
     class="row g-3 align-items-center mb-4 p-4 bg-light rounded shadow-sm w-75 form-search"
-    style="margin: 0 auto;">
+    style="margin: 50px auto;">
 
     <!-- Chọn kiểu tìm kiếm -->
     <div class="col-md-3">
