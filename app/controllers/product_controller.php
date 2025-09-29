@@ -16,6 +16,36 @@ class ProductController extends BaseController
         $this->render("list", ["products" => $product]);
     }
 
+    public function create()
+    {
+        $productModel = new Product();
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $masp = $_POST['masp'];
+            $tensanpham = $_POST['tensanpham'];
+            $giatien = $_POST['giatien'];
+
+            // Xử lý upload ảnh
+            $image = '';
+            if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
+                $uploadDir = __DIR__ . '/../../public/images/product/';
+                if (!is_dir($uploadDir)) {
+                    mkdir($uploadDir, 0777, true);
+                }
+                $fileName = basename($_FILES['image']['name']);
+                $targetPath = $uploadDir . $fileName;
+                if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
+                    $image = $fileName;
+                }
+            }
+
+            $productModel->create($masp, $tensanpham, $giatien, $image);
+            header("Location: index.php?controller=product&action=list");
+            exit;
+        } else {
+            $this->render("create");
+        }
+    }
+
     // update
     public function update()
     {

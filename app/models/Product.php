@@ -16,6 +16,27 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        // Create
+        public function create($masp, $tensanpham, $giatien, $image){
+            // Thêm vào bảng sản phẩm
+            $sql1 = "INSERT INTO sanpham (masp, tensanpham, image) VALUES (:masp, :tensanpham, :image)";
+            $stmt1 = $this->conn->prepare($sql1);
+            $stmt1->execute([
+                ':masp' => $masp,
+                ':tensanpham' => $tensanpham,
+                ':image' => $image
+            ]);
+
+            // Thêm giá tiền vào bảng chi tiết hóa đơn
+            $sql2 = "INSERT INTO chitiethoadon (masanpham, giaban) VALUES (:masp, :giatien)";
+            $stmt2 = $this->conn->prepare($sql2);
+            $stmt2->execute([
+                ':masp' => $masp,
+                ':giatien' => $giatien
+            ]);
+        }
+
+
         // Tim sp ID
         public function findById($id)
         {

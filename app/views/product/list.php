@@ -10,11 +10,11 @@
 
 <div class="table-responsive">
     <table class="table table-hover table-striped table-bordered align-middle mb-0 w-75 text-center mx-auto">
-        <!-- Nút thêm nhân viên -->
+        <!-- Nút thêm Sản Phẩm -->
         <div class="d-flex w-75 mb-4 mx-auto">
             <a href="index.php?controller=product&action=create"
                 class="btn btn-success btn-lg fw-bold mt-3">
-                <i class="fas fa-user-plus me-2"></i> Thêm nhân viên
+                <i class="fas fa-user-plus me-2"></i> Thêm sản phẩm
             </a>
         </div>
         <thead class="table-dark text-center">

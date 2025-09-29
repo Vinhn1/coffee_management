@@ -10,7 +10,7 @@ class Router
         $controllerList = array(
             'home' => ['index', 'error'],
             'employee' => ['list', 'create', 'search', 'update', 'deactivete', 'error'],
-            'product' => ['list', 'update', 'delete', 'error'],
+            'product' => ['list', 'create', 'update', 'delete', 'error'],
         );
 
         // Kiểm tra nếu không có controller tồn tại thì trả về index/error
